@@ -1,0 +1,6 @@
+{
+  "name": "Hành Trình Chinh Phục Vòng Nguyệt Quế",
+  "description": "Ứng dụng Quản lý & Thi đua Học sinh theo phong cách Gamification hoạt hình sinh động cho lớp học.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

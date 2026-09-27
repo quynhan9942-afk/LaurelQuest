@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "class": {
+      "title": "Class Data",
+      "description": "Stores Class 6A3 real-time data including 44 students, attendance, point logs, and settings",
+      "properties": {
+        "students": { "type": "array" },
+        "teams": { "type": "array" },
+        "pointLogs": { "type": "array" },
+        "rewards": { "type": "array" },
+        "redemptions": { "type": "array" },
+        "customBadges": { "type": "array" },
+        "criteriaList": { "type": "array" },
+        "weeklySnapshots": { "type": "array" },
+        "attendanceRecords": { "type": "array" },
+        "schoolRankings": { "type": "array" },
+        "seatingMap": { "type": "object" },
+        "weeklyHistory": { "type": "object" },
+        "settings": { "type": "object" }
+      }
+    }
+  }
+}

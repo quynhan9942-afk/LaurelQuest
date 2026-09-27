@@ -1,0 +1,29 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email != null &&
+        request.auth.token.email.lower() == "quynhan9942@gmail.com"
+      );
+    }
+
+    match /classes/{classId} {
+      // Allow public read access so parents/guests can view real-time updates
+      allow read: if true;
+      // Only authenticated Admin (Teacher) can write/update class documents
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /schoolRankings/{rankingId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}
+
